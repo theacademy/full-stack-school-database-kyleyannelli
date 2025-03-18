@@ -10,8 +10,13 @@ public class TeacherMapper implements RowMapper<Teacher> {
     public Teacher mapRow(ResultSet rs, int rowNum) throws SQLException {
         //YOUR CODE STARTS HERE
 
+        final Teacher teacher = new Teacher();
+        teacher.setTeacherId(rs.getInt("tid"));
+        teacher.setDept(rs.getString("dept"));
+        teacher.setTeacherFName(rs.getString("tFName"));
+        teacher.setTeacherLName(rs.getString("tLName"));
 
-        return null;
+        return teacher;
 
         //YOUR CODE ENDS HERE
     }
