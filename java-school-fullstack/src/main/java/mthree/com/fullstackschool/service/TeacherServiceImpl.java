@@ -14,6 +14,9 @@ public class TeacherServiceImpl implements TeacherServiceInterface {
     @Autowired
     TeacherDao teacherDao;
 
+    public TeacherServiceImpl() {
+    }
+
     // using this because services are called with new ServiceImpl(dao) in the tests
     public TeacherServiceImpl(TeacherDao teacherDao) {
         this.teacherDao = teacherDao;

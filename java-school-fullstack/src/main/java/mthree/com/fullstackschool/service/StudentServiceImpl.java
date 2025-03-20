@@ -18,6 +18,9 @@ public class StudentServiceImpl implements StudentServiceInterface {
     @Autowired
     private CourseServiceInterface courseService;
 
+    public StudentServiceImpl() {
+    }
+
     // using this because services are called with new ServiceImpl(dao) in the tests
     public StudentServiceImpl(StudentDao studentDao) {
         this.studentDao = studentDao;
